@@ -3,6 +3,12 @@ const express = require('express');
 const router = express.Router();
 const User = require('./users-model.js');
 
+router.get('/', (req, res) => {
+    res.send(`
+    <h1>Node Module Project 4</h1>
+    `)
+})
+
 router.get('/users', (req, res) => {
     const result = User.get();
     if (result) {
